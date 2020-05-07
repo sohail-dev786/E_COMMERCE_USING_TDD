@@ -2,6 +2,7 @@
 <%@page import="com.E_Commerce_DB_Connection.DB_Connection"%>
 <%@page import="com.E_Commerce_Service.IDAO"%>
 <%@page import="com.E_Commerce_Model.UserModel"%>
+
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
@@ -9,6 +10,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,6 +19,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
@@ -301,11 +305,13 @@
             <div class="table-title">
                 <div class="row ">
                     <div class="col-sm-6 ">
-						<a href="#users-list" class="users"><h2>CLICK TO MANAGE <b>USERS</b></h2></a>
+                    					
+						
+						<a href="#users-list" class="users"><span class="fa fa-users fa-5x"></span>	<h2>CLICK TO MANAGE <b>USERS</b></h2></a>
 					</div>
 					
 					<div class="col-sm-6">
-						<a href="#product-list" class="products"><h2>CLICK TO MANAGE <b>PRODUCTS</b></h2></a>
+						<a href="#product-list" class="products"><span class="fa fa-cart-plus fa-5x"></span></span><h2>CLICK TO MANAGE <b>PRODUCTS</b></h2></a>
 					</div>
 					
                 </div>  
@@ -343,13 +349,16 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Manage <b>Users</b></h2>
+						
+				
+						<h3><span class="fa fa-user-o fa-1x "><b>Manage Users</b></h3>
+					
+					
 					</div>
 					<div class="col-sm-6">
 						
 						<a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New User</span></a>
-					<!-- 	<a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Delete</span></a>						
-					 -->
+					 
 					</div>
                 </div>
             </div>
@@ -381,8 +390,6 @@
                 	%>
                 
                 	</td>
-                
-                     
                 
                 
                 	<td>
@@ -426,7 +433,7 @@
                          
             
                              
-                            <a href="#deleteEmployeeModal" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
+                            <a href="#" onclick="askConfirm('<%= model.getU_id() %>','<%= model.getU_fname() %>')" class="delete" data-toggle="modal"><i class="material-icons" data-toggle="tooltip" title="Delete">&#xE872;</i></a>
                         </td>
                     </tr>
                     
@@ -573,6 +580,12 @@
 	</div>
 	
 	
+	
+	
+					<!-- DELETE USER RECORDS -->
+	
+	
+	
 	<!-- Delete Modal HTML -->
 	<div id="deleteEmployeeModal" class="modal fade">
 		<div class="modal-dialog">
@@ -590,12 +603,33 @@
 						<input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
 						<input type="submit" class="btn btn-danger" value="Delete">
 					</div>
+					<input type="hidden" id="id">
 				</form>
 			</div>
 		</div>
 	</div>
 
 
+
+	<script type="text/javascript" rel="javascript">
+	function askConfirm(userId,userNm)
+	{
+				console.log("dshdgsdsds");
+				var response=confirm("DO YOU WANT TO DELETE RECORD OF :\t "+userNm+"! ! !");
+					if(response)
+						{
+						
+						window.location="http://localhost:8080/E_COMMERCE_USING_TDD/Admin.jsp?userId="+userId;
+						
+						
+						}
+	
+	}
+	
+	</script>
+
+
+	
 
 
 
@@ -654,7 +688,8 @@
             <div class="table-title">
                 <div class="row">
                     <div class="col-sm-6">
-						<h2>Manage <b>Products</b></h2>
+						<h2><span class="fa fa fa-plus-square fa-1x "></span><b>Manage Products</b></h2>
+					
 					</div>
 					<div class="col-sm-6">
 						<a href="#addproducts" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Add New Products</span></a>
@@ -911,7 +946,9 @@
 	</div>
 	
 				
-				
+
+	
+	</script>			
 
 <script
 	src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

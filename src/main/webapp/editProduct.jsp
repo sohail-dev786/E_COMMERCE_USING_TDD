@@ -13,9 +13,11 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
- 
+
 <style type="text/css">
 
 
@@ -62,9 +64,11 @@ margin-bottom:50px;
  
 			 
 			 	<div class="container">
-			 	
+					<div class="row">
+			 		
 			 		<form action="Process/editProduct" method="get">
-					<div >						
+					<div >	
+				
 						<h4 >Edit Product</h4>
 					</div>
 					<div >					
@@ -102,6 +106,7 @@ margin-bottom:50px;
 					</div>
 				</form>
 				</div>
+				</div>			 		
 	
 
 </body>

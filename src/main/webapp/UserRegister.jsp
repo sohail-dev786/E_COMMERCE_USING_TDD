@@ -85,6 +85,11 @@
 
 </head>
 <body>
+	<jsp:include page="Navigation_Header.jsp"></jsp:include>
+
+
+
+<main>
   <div class="container my-4">
 
 
@@ -100,9 +105,11 @@
               <section id="register">
          
                 <form action="Process/userinsert"  method="post"  class="text-center border border-light p-5">
-        
-                  <p class="h4 mb-4 signup">Sign up</p>
-        
+        			<div>
+                		<span class="fa fa-user-plus  fa-3x fa-spin "></span>
+								
+                	  <p class="h4 mb-4 signup">Sign up</p>
+        			</div>
                   <div class="form-row mb-4">
                     
                     <div class="col">
@@ -161,7 +168,7 @@
     </section>       
             </div>
           
-           
+ </main>          
             
        
 </body>
