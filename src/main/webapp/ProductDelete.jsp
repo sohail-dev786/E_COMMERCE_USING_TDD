@@ -2,7 +2,6 @@
 <%@page import="com.E_Commerce_Service.IDAO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,18 +9,19 @@
 <title>Insert title here</title>
 </head>
 <body>
+
+
 	<%
-		int userid = Integer.parseInt(request.getParameter("userId"));
+		int productId = Integer.parseInt(request.getParameter("ProductId"));
 
 		IDAO mydao = new DB_Connection();
-		int rowdeleted = mydao.DeleteUser(userid);
 
-		if (rowdeleted > 0) 
-		{
+		int ProductDeleted = mydao.DeleteProduct(productId);
+
+		if (ProductDeleted > 0) {
 	%>
-
-
-
+	
+	
 	<script type="text/javascript">
 
 	console.log("inside deleted script");
@@ -36,8 +36,6 @@
 	<%
 		}
 	%>
-
-
 
 </body>
 </html>

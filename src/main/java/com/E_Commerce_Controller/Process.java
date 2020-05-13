@@ -135,12 +135,16 @@ public class Process extends HttpServlet {
 			
 			out.println(" swal('<H3>SUCCESSFULLY LOGIN </H3>', '<B>WELCOME TO ADMIN PANEL</H1>', 'success'); ");
 			
-			//out.print("location.href='http://localhost:8080/E_COMMERCE_USING_TDD/Admin.jsp'; ");
+			out.print("location.href='http://localhost:8080/E_COMMERCE_USING_TDD/Admin.jsp'; ");
 			
 			out.println(" }); ");
 			
 			
 			out.println("</script>");
+			
+		//	RequestDispatcher dispatcher=request.getRequestDispatcher("/Home.jsp");
+		//	dispatcher.forward(request, response);
+			
 			
 			
 		}

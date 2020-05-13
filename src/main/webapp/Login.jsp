@@ -58,7 +58,7 @@
 
 							<div class="card-body">
 
-								<form>
+								<form action="Process/login" method="post">
 									<div class="form-group">
 										<label for="exampleInputEmail1" class="font-weight-bold">Email address</label> <input
 											type="text" class="form-control" name="uemail"

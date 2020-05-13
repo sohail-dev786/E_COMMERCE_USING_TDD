@@ -15,6 +15,7 @@ import com.E_Commerce_Model.ProductModel;
 import com.E_Commerce_Model.UserModel;
 import com.E_Commerce_Service.IDAO;
 
+
 public class DB_Connection implements IDAO {
 
 	
@@ -401,7 +402,7 @@ public class DB_Connection implements IDAO {
 			
 			try {
 			
-				String query="DELETE USERS WHERE U_ID =?";
+				String query="DELETE FROM USERS WHERE U_ID =?";
 				
 				pstmt=conn.prepareStatement(query);
 				pstmt.setInt(1, i);
